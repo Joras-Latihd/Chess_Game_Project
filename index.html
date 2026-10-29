@@ -1,14 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chess Game</title>
-  <link rel="stylesheet" href="chess.css" />
-</head>
-<body>
-  <h1>♟️ Online Chess Game by Saroj Dhital ♛</h1>
-  <div class="chess-board" id="chessBoard"></div>
-  <script src="chess.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Play chess in your browser against the computer or a friend. Full rules, move history, undo and mobile support."
+    />
+    <meta name="theme-color" content="#16213e" />
+    <title>Chess Game | Saroj Dhital</title>
+    <link rel="stylesheet" href="chess.css" />
+  </head>
+  <body>
+    <h1>&#9823;&#65039; Chess Game by Saroj Dhital &#9819;</h1>
+    <main class="app">
+      <section class="board-wrap">
+        <div class="player" id="topBar">
+          <span id="topName"></span><span class="captured" id="topCap"></span>
+        </div>
+        <div class="chess-board" id="chessBoard" aria-label="Chess board"></div>
+        <div class="player" id="bottomBar">
+          <span id="bottomName"></span
+          ><span class="captured" id="bottomCap"></span>
+        </div>
+      </section>
+      <aside class="panel">
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+        <div class="controls">
+          <label
+            >Mode
+            <select id="mode">
+              <option value="cpu">vs Computer</option>
+              <option value="two">2 Players</option>
+            </select>
+          </label>
+          <label
+            >Level
+            <select id="level">
+              <option value="1">Easy</option>
+              <option value="2" selected>Medium</option>
+              <option value="3">Hard</option>
+            </select>
+          </label>
+          <button id="newBtn" class="primary" type="button">New game</button>
+          <button id="undoBtn" type="button">Undo</button>
+          <button id="flipBtn" type="button">Flip board</button>
+        </div>
+        <h2>Moves</h2>
+        <ol class="moves" id="moves"></ol>
+      </aside>
+    </main>
+    <script src="chess.js" defer></script>
+  </body>
 </html>
