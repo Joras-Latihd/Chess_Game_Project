@@ -124,3 +124,21 @@ h1 {
 .chess-board .bp .piece {
   color: #15181f;
 }
+
+/* ---------- white piece visibility ---------- */
+.chess-board .wp .piece {
+  color: #ffffff;
+  text-shadow:
+    -2px -2px 0 #1b2230,
+    2px -2px 0 #1b2230,
+    -2px 2px 0 #1b2230,
+    2px 2px 0 #1b2230,
+    0 -2px 0 #1b2230,
+    0 2px 0 #1b2230,
+    -2px 0 0 #1b2230,
+    2px 0 0 #1b2230,
+    0 4px 6px rgba(0, 0, 0, 0.35);
+}
+.chess-board .bp .piece {
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.35);
+}
