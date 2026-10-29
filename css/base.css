@@ -9,6 +9,7 @@
   --muted: #6b7a90;
   --blue: #2f7df6;
   --blue-d: #1b4fb8;
+  --brass: #d4a853;
   --display: "Fredoka", ui-rounded, "Segoe UI", system-ui, sans-serif;
   --body: "DM Sans", "Segoe UI", system-ui, sans-serif;
   --symbols:
@@ -28,7 +29,21 @@ body {
   min-height: 100dvh;
   padding: max(14px, env(safe-area-inset-top)) 14px
     max(22px, env(safe-area-inset-bottom));
-  background: linear-gradient(160deg, var(--bg1), var(--bg2)) fixed;
+  background:
+    conic-gradient(
+        rgba(255, 255, 255, 0.022) 25%,
+        transparent 0 50%,
+        rgba(255, 255, 255, 0.022) 0 75%,
+        transparent 0
+      )
+      0 0 / 64px 64px,
+    radial-gradient(
+      900px 520px at 12% -10%,
+      rgba(79, 181, 138, 0.14),
+      transparent 60%
+    ),
+    linear-gradient(180deg, var(--bg2), var(--bg));
+  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--body);
   font-weight: 500;
@@ -66,6 +81,15 @@ body {
   text-shadow:
     0 2px 0 #fff,
     0 5px 8px rgba(31, 42, 58, 0.2);
+}
+.head h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 2px;
+  background: var(--brass);
 }
 .head .by {
   margin: 4px 0 0;
