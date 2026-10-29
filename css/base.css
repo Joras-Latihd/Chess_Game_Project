@@ -1,0 +1,101 @@
+/* ---------- design tokens ---------- */
+:root {
+  --bg1: #e9eff6;
+  --bg2: #cfd9e6;
+  --card: #eef2f8;
+  --well: #e2e8f1;
+  --edge: #b7c3d4;
+  --ink: #1f2a3a;
+  --muted: #6b7a90;
+  --blue: #2f7df6;
+  --blue-d: #1b4fb8;
+  --display: "Fredoka", ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --body: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --symbols:
+    "Segoe UI Symbol", "Noto Sans Symbols 2", "Noto Sans Symbols",
+    "Apple Symbols", "DejaVu Sans", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scrollbar-gutter: stable;
+}
+
+/* ---------- page ---------- */
+body {
+  margin: 0;
+  min-height: 100dvh;
+  padding: max(14px, env(safe-area-inset-top)) 14px
+    max(22px, env(safe-area-inset-bottom));
+  background: linear-gradient(160deg, var(--bg1), var(--bg2)) fixed;
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 500;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.shell {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 22px clamp(14px, 3vw, 30px) 30px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #f7f9fc, var(--card));
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 -8px 0 rgba(31, 42, 58, 0.07) inset,
+    0 2px 0 var(--edge),
+    0 34px 50px -24px rgba(31, 42, 58, 0.45);
+}
+
+/* ---------- title ---------- */
+.head {
+  margin-bottom: 18px;
+  text-align: center;
+}
+.head h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(2rem, 6vw, 2.7rem);
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  color: #1a2538;
+  text-shadow:
+    0 2px 0 #fff,
+    0 5px 8px rgba(31, 42, 58, 0.2);
+}
+.head .by {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+/* ---------- layout ---------- */
+.app {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  align-items: start;
+}
+.board-wrap,
+.panel {
+  width: min(100%, 640px);
+}
+@media (min-width: 900px) {
+  .app {
+    grid-template-columns: auto 330px;
+    justify-content: center;
+    justify-items: stretch;
+  }
+  .board-wrap {
+    width: min(620px, max(340px, 100dvh - 250px));
+  }
+  .panel {
+    width: auto;
+  }
+}
