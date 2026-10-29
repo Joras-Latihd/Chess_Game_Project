@@ -10,49 +10,70 @@
       name="description"
       content="Play chess in your browser against the computer or a friend. Full rules, move history, undo and mobile support."
     />
-    <meta name="theme-color" content="#16213e" />
+    <meta name="theme-color" content="#dde4ec" />
     <title>Chess Game | Saroj Dhital</title>
-    <link rel="stylesheet" href="chess.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Fredoka:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="chess.css?v=2" />
   </head>
   <body>
-    <h1>&#9823;&#65039; Chess Game by Saroj Dhital &#9819;</h1>
-    <main class="app">
-      <section class="board-wrap">
-        <div class="player" id="topBar">
-          <span id="topName"></span><span class="captured" id="topCap"></span>
-        </div>
-        <div class="chess-board" id="chessBoard" aria-label="Chess board"></div>
-        <div class="player" id="bottomBar">
-          <span id="bottomName"></span
-          ><span class="captured" id="bottomCap"></span>
-        </div>
-      </section>
-      <aside class="panel">
-        <div class="status" id="status" role="status" aria-live="polite"></div>
-        <div class="controls">
-          <label
-            >Mode
-            <select id="mode">
-              <option value="cpu">vs Computer</option>
-              <option value="two">2 Players</option>
-            </select>
-          </label>
-          <label
-            >Level
-            <select id="level">
-              <option value="1">Easy</option>
-              <option value="2" selected>Medium</option>
-              <option value="3">Hard</option>
-            </select>
-          </label>
-          <button id="newBtn" class="primary" type="button">New game</button>
-          <button id="undoBtn" type="button">Undo</button>
-          <button id="flipBtn" type="button">Flip board</button>
-        </div>
-        <h2>Moves</h2>
-        <ol class="moves" id="moves"></ol>
-      </aside>
-    </main>
-    <script src="chess.js" defer></script>
+    <div class="shell">
+      <header class="head">
+        <h1>Chess</h1>
+        <p class="by">A project by Saroj Dhital</p>
+      </header>
+
+      <main class="app">
+        <section class="board-wrap">
+          <div class="player" id="topBar">
+            <span id="topName"></span><span class="captured" id="topCap"></span>
+          </div>
+          <div
+            class="chess-board"
+            id="chessBoard"
+            aria-label="Chess board"
+          ></div>
+          <div class="player" id="bottomBar">
+            <span id="bottomName"></span
+            ><span class="captured" id="bottomCap"></span>
+          </div>
+        </section>
+        <aside class="panel">
+          <div
+            class="status"
+            id="status"
+            role="status"
+            aria-live="polite"
+          ></div>
+          <div class="controls">
+            <label
+              >Mode
+              <select id="mode">
+                <option value="cpu">vs Computer</option>
+                <option value="two">2 Players</option>
+              </select>
+            </label>
+            <label
+              >Level
+              <select id="level">
+                <option value="1">Easy</option>
+                <option value="2" selected>Medium</option>
+                <option value="3">Hard</option>
+              </select>
+            </label>
+            <button id="newBtn" class="primary" type="button">New game</button>
+            <button id="undoBtn" type="button">Undo</button>
+            <button id="flipBtn" type="button">Flip board</button>
+          </div>
+          <h2>Moves</h2>
+          <ol class="moves" id="moves"></ol>
+        </aside>
+      </main>
+    </div>
+    <script src="chess.js?v=2" defer></script>
   </body>
 </html>
