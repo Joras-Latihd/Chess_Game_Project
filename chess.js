@@ -400,6 +400,9 @@
     const { ms, st } = info();
     const checkSq =
       st === "check" || st === "mate" ? kingAt(s.b, s.turn === "w") : -1;
+    $("status").dataset.state = busy ? "think" : st;
+    $("topBar").classList.toggle("active", (s.turn === "w") === flipped);
+    $("bottomBar").classList.toggle("active", (s.turn === "w") === !flipped);
     boardEl.replaceChildren();
     for (let k = 0; k < 64; k++) {
       const i = flipped ? 63 - k : k,
