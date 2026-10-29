@@ -1,0 +1,33 @@
+/* ---------- phones ---------- */
+@media (max-width: 640px) {
+  body {
+    padding: 10px 8px 18px;
+  }
+  .shell {
+    padding: 16px 12px 20px;
+    border-radius: 24px;
+  }
+  .chess-board {
+    border-width: 7px;
+    border-radius: 18px;
+  }
+  .player {
+    min-height: 42px;
+    margin: 10px 0;
+  }
+  .controls {
+    gap: 10px;
+  }
+  .moves {
+    max-height: 150px;
+  }
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
