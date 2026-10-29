@@ -1,0 +1,51 @@
+/* ---------- player bars ---------- */
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  margin: 12px 0;
+  padding: 8px 14px;
+  border-radius: 16px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  background: var(--well);
+  box-shadow:
+    inset 0 3px 7px rgba(31, 42, 58, 0.14),
+    0 2px 0 #fff;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.player::before {
+  content: "";
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--edge);
+  transition: background 0.25s ease;
+}
+.player > span:first-of-type {
+  flex: 1;
+}
+.player.active {
+  background: linear-gradient(180deg, #fff, #e8edf5);
+  box-shadow:
+    0 3px 0 var(--edge),
+    0 8px 12px -4px rgba(31, 42, 58, 0.25);
+}
+.player.active::before {
+  background: var(--blue);
+}
+
+/* ---------- captured pieces ---------- */
+.captured {
+  font-family: var(--symbols);
+  font-size: 1.2rem;
+  letter-spacing: -3px;
+  color: #4a5a72;
+  white-space: nowrap;
+  overflow: hidden;
+}
