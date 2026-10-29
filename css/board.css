@@ -8,6 +8,8 @@
   container-type: inline-size;
   overflow: hidden;
   border: 10px solid;
+  outline: 2px solid rgba(212, 168, 83, 0.6);
+  outline-offset: -12px;
   border-color: #dbe3ee #c3cedd #b0bdd0 #c3cedd;
   border-radius: 22px;
   box-shadow:
