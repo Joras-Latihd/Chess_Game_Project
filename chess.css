@@ -102,3 +102,25 @@ h1 {
     0 0 3px #000,
     0 0 6px #555;
 }
+
+/* ---------- board and piece fixes ---------- */
+.chess-board .square {
+  border-radius: 0;
+}
+.chess-board .square.light {
+  background-color: #e8edf3;
+}
+.chess-board .square.dark {
+  background-color: #5f7ea3;
+}
+.chess-board .piece {
+  font-family:
+    "Segoe UI Symbol", "Noto Sans Symbols 2", "Noto Sans Symbols",
+    "Apple Symbols", "DejaVu Sans", sans-serif;
+}
+.chess-board .wp .piece {
+  color: #ffffff;
+}
+.chess-board .bp .piece {
+  color: #15181f;
+}
